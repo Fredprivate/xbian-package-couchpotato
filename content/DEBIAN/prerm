@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [ $1 == "remove" ]; then
+
+	/etc/init.d/couchpotato stop &>/dev/null;
+
+fi
