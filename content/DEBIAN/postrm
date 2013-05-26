@@ -2,6 +2,11 @@
 
 if [ "$1" == "remove" ] || [ "$1" == "purge" ]; then
 
-	true
+	if [ -d "/usr/local/etc/couchpotato" ]; then
+		rm -r /usr/local/etc/couchpotato &>/dev/null
+	fi
+	if [ -d "/usr/local/share/couchpotato" ]; then
+		rm -r /usr/local/share/couchpotato &>/dev/null
+	fi
 
 fi
