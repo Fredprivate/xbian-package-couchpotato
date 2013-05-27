@@ -2,6 +2,8 @@
 
 if [ $1 == "remove" ]; then
 
-	/etc/init.d/couchpotato stop &>/dev/null;
+        if [ -f "/etc/init.d/couchpotato" ]; then
+                /etc/init.d/couchpotato stop &>/dev/null;
+        fi
 
 fi
