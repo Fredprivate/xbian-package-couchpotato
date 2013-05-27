@@ -7,4 +7,3 @@ Architecture: armhf
 Depends: xbian-update
 Maintainer: sjengfred <sjengfred@home.nl>
 Description: CouchPotato 2.0.7 compiled, patched and configured for XBian
-Installed-Size: 25180
