@@ -3,7 +3,6 @@ Package: xbian-package-couchpotato
 Version: 1.1
 Section: net
 Priority: optional
-Codename: wheezy
 Architecture: armhf
 Depends: xbian-update
 Maintainer: sjengfred <sjengfred@home.nl>
