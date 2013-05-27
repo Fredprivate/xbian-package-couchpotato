@@ -1,8 +1,7 @@
 #!/bin/bash
-FILE=""
+
 DIR="content/usr/local/share/couchpotato"
-# init
-# look for empty dir 
+
 if [ "$(ls -A $DIR)" ]; then
      	printf "\nDirectory $DIR is not empty, make sure it is up to date before building the package\n"
 	git --git-dir=$DIR/.git --work-tree=$DIR fetch > /dev/null 
