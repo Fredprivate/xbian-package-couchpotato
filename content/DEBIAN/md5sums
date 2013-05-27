@@ -1,6 +1,6 @@
 d41d8cd98f00b204e9800998ecf8427e  ./content/etc/couchpotato/settings.conf
 a84fe46757ecf74ed8ba05d7f527824e  ./content/etc/init.d/couchpotato
-a67b6d391756dcd145997ef48a16d87e  ./content/usr/local/etc/couchpotato/settings.conf
+2e09f5908f34cd076bbaa70405a75a9a  ./content/usr/local/etc/couchpotato/settings.conf
 b87e057d9c085df901955616f5c51218  ./content/usr/local/share/couchpotato/CouchPotato.py
 5d626049a41d3d26505f6f264384434b  ./content/usr/local/share/couchpotato/README.md
 1c1856df6e20d42066e8d19029b64c55  ./content/usr/local/share/couchpotato/contributing.md
