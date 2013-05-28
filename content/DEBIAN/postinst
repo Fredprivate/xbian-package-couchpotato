@@ -25,6 +25,11 @@ if [ $1 == "configure" ]; then
 	chmod 777 /home/xbian/torrents
 	chown xbian:xbian /home/xbian/torrents
 
+	if [ -f "/usr/local/etc/couchpotato/settings.reuse" ]; then
+		mv /usr/local/etc/couchpotato/settings.conf /usr/local/etc/couchpotato/settings.new;
+		mv /usr/local/etc/couchpotato/settings.reuse /usr/local/etc/couchpotato/settings.conf;
+	fi
+
 	chmod 777 /usr/local/share/couchpotato
 	chown -R xbian /usr/local/share/couchpotato
 	chmod -R 777 /usr/local/etc/couchpotato
