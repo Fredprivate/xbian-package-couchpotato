@@ -37,6 +37,7 @@ PID_PATH=$(dirname $PID_FILE)
 NAME=couchpotato
 DESC=CouchPotato
 DAEMON_OPTS=" CouchPotato.py --daemon --pid_file=${PID_FILE} --config_file=/usr/local/etc/couchpotato/settings.conf"
+NICE=0
 
 ##
 . /lib/lsb/init-functions
@@ -82,7 +83,7 @@ case "$ACTION" in
 			if [ -f $PID_FILE ]; then
 				rm $PID_FILE;
 			fi
-			start-stop-daemon -d $APP_PATH -c $RUN_AS --start --background --pidfile $PID_FILE --exec $DAEMON -- $DAEMON_OPTS
+			start-stop-daemon -d $APP_PATH -c $RUN_AS --start --nicelevel $NICE --background --pidfile $PID_FILE --exec $DAEMON -- $DAEMON_OPTS
 			check_retval
 		else
 			PID=$(cat $PID_FILE);
