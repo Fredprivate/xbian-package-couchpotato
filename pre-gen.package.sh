@@ -9,5 +9,5 @@ if [ "$(ls -A $DIR)" ]; then
 	git --git-dir=$DIR/.git --work-tree=$DIR status
 else
     	printf "\n$DIR is Empty, cloning repository\n"
-	git clone https://github.com/sjengfred/CouchPotatoServer $DIR
+	git clone https://github.com/xbianonpi/CouchPotatoServer $DIR
 fi
