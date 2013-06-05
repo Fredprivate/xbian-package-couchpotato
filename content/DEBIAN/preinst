@@ -6,7 +6,7 @@ if [ $1 == "install" -o $1 == "upgrade" ]; then
 
 		mv /usr/local/etc/couchpotato /etc/couchpotato
 
-		ln -s /usr/local/etc/couchpotato /etc/couchpotato
+		ln -s /etc/couchpotato /usr/local/etc/couchpotato
 
 	else
 		true
