@@ -7,9 +7,10 @@ DIR="./content/usr/local/share/couchpotato"
 
 if [ "$(ls -A $DIR)" ]; then
         rm -rf $DIR
-else
-        git clone https://github.com/xbianonpi/CouchPotatoServer $DIR
 fi
+
+git clone https://github.com/xbianonpi/CouchPotatoServer $DIR
+
 #-----------------------------------------------------------
 
 
