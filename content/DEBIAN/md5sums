@@ -12,11 +12,11 @@ a4a7e457b55b5ac2877f7973dbba37e9  usr/local/share/couchpotato/.git/hooks/pre-app
 3ff6ba9cf6d8e5332978e057559b5562  usr/local/share/couchpotato/.git/hooks/pre-rebase.sample
 7dfe15854212a30f346da5255c1d794b  usr/local/share/couchpotato/.git/hooks/prepare-commit-msg.sample
 98d7f8e291edbab8df79e433dc97ecc8  usr/local/share/couchpotato/.git/hooks/update.sample
-1a5b194c2a17043a32ad727baeb2759f  usr/local/share/couchpotato/.git/index
+8ceeefb760d72e2d67d66146b93f8ca7  usr/local/share/couchpotato/.git/index
 036208b4a1ab4a235d75c181e685e5a3  usr/local/share/couchpotato/.git/info/exclude
-9b88ddd39f2bbefdd26a65a60d5816fa  usr/local/share/couchpotato/.git/logs/HEAD
-9b88ddd39f2bbefdd26a65a60d5816fa  usr/local/share/couchpotato/.git/logs/refs/heads/master
-9b88ddd39f2bbefdd26a65a60d5816fa  usr/local/share/couchpotato/.git/logs/refs/remotes/origin/HEAD
+73e92490f8adc0aa36ea112f5ed34d03  usr/local/share/couchpotato/.git/logs/HEAD
+73e92490f8adc0aa36ea112f5ed34d03  usr/local/share/couchpotato/.git/logs/refs/heads/master
+73e92490f8adc0aa36ea112f5ed34d03  usr/local/share/couchpotato/.git/logs/refs/remotes/origin/HEAD
 db4214636be1008e96ec400135d0257a  usr/local/share/couchpotato/.git/objects/pack/pack-93fd687e00d215bc8d89dc2ca2772c41530dcb97.idx
 6916d11341d17daa27e49701d29bfff2  usr/local/share/couchpotato/.git/objects/pack/pack-93fd687e00d215bc8d89dc2ca2772c41530dcb97.pack
 f4a434310985541d9a19b37e24d64d68  usr/local/share/couchpotato/.git/packed-refs

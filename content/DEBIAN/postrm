@@ -1,18 +1,21 @@
 #!/bin/bash
 
-if [ "$1" == "remove" ]; then
+if [ "$1" == "remove" ] || [ "$1" == "purge" ]; then
 
 	if [ -d "/usr/local/share/couchpotato" ]; then
-		rm -r /usr/local/share/couchpotato &>/dev/null
+		rm -rf /usr/local/share/couchpotato &>/dev/null
 	fi
-
-elif [ "$1" == "purge" ]; then
 
 # removing config files and database should be performed only if user requested purge
 
-	if [ -d "/etc/couchpotato" ]; then
-		rm -fr /etc/couchpotato
-                rm -f /etc/default/couchpotato
+	if [ "$1" == "purge" ]; then
+
+		if [ -d "/etc/couchpotato" ]; then
+			rm -fr /etc/couchpotato
+                	rm -f /etc/default/couchpotato
+		fi
 	fi
+
+	true
 
 fi
