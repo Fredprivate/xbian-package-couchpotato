@@ -4,12 +4,7 @@ if [ $1 == "install" -o $1 == "upgrade" ]; then
 
         if [ -d "/usr/local/etc/couchpotato/" ]; then
 
-		if [ ! -d "/etc/couchpotato" ];then
-			mkdir /etc/couchpotato
-		fi
-
-		mv /usr/local/etc/couchpotato/* /usr/local/etc/couchpotato/.[^.]* /etc/couchpotato/.
-		rm -rf /usr/local/etc/couchpotato
+		mv /usr/local/etc/couchpotato /etc/couchpotato
 
 		ln -s /usr/local/etc/couchpotato /etc/couchpotato
 
