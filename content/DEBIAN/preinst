@@ -11,6 +11,8 @@ if [ $1 == "install" -o $1 == "upgrade" ]; then
 		mv /usr/local/etc/couchpotato/* /usr/local/etc/couchpotato/.[^.]* /etc/couchpotato/.
 		rm -rf /usr/local/etc/couchpotato
 
+		ln -s /usr/local/etc/couchpotato /etc/couchpotato
+
 	else
 		true
 	fi
