@@ -1,5 +1,18 @@
 #!/bin/sh
 
+#------------------------------------------------------------
+#pre-gen specific for couchpotato package (to enable updates)
+
+DIR="./content/usr/local/share/couchpotato"
+
+if [ "$(ls -A $DIR)" ]; then
+        rm -rf $DIR
+else
+        git clone https://github.com/xbianonpi/CouchPotatoServer $DIR
+fi
+#-----------------------------------------------------------
+
+
 rm_size() {
 	cat ./content/DEBIAN/control | grep -v "Installed-Size:" > ./content/DEBIAN/control.new
 	mv ./content/DEBIAN/control.new ./content/DEBIAN/control
