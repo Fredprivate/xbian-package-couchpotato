@@ -1,12 +1,12 @@
 #!/bin/bash
 
 if [ "$1" == "remove" ] || [ "$1" == "purge" ]; then
-	
-	if [ -d "/usr/local/etc/couchpotato" ]; then
+
+	if [ -d "/etc/couchpotato" ]; then
        	while true; do
     			read -p "Do you want to remove the couchpotato database files? (yes/no) " yn
     			case $yn in
-       			yes ) 	rm -r /usr/local/etc/couchpotato &>/dev/null; 
+       			yes ) 	rm -r /etc/couchpotato &>/dev/null; 
 					break;;
         			no )   break;;
         			* ) echo "Please answer yes or no.";;

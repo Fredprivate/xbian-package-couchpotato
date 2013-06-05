@@ -1,0 +1,6 @@
+
+
+ENABLED=1
+
+CONFIG_FILE=/etc/couchpotato/settings.conf
+NICE=0

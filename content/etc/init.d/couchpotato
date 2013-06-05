@@ -29,6 +29,8 @@
 # Description:       starts instance of CouchPotato using start-stop-daemon
 ### END INIT INFO
 
+. /etc/default/couchpotato
+
 APP_PATH=/usr/local/share/couchpotato/
 RUN_AS=xbian
 DAEMON=/usr/bin/python
@@ -36,11 +38,11 @@ PID_FILE=/tmp/couchpotato.pid
 PID_PATH=$(dirname $PID_FILE)
 NAME=couchpotato
 DESC=CouchPotato
-DAEMON_OPTS=" CouchPotato.py --daemon --pid_file=${PID_FILE} --config_file=/usr/local/etc/couchpotato/settings.conf"
-NICE=0
+DAEMON_OPTS=" CouchPotato.py --daemon --pid_file=${PID_FILE} --config_file=$CONFIG_FILE"
 
 ##
 . /lib/lsb/init-functions
+test "$ENABLED" = '1' || exit 0
 test -x $DAEMON || exit 0
 set -e
 
