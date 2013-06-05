@@ -2,6 +2,10 @@
 
 if [ $1 == "install" -o $1 == "upgrade" ]; then
 
+        if [ -f "/etc/init.d/couchpotato" ]; then
+                /etc/init.d/couchpotato stop &>/dev/null;
+        fi
+
         if [ -d "/usr/local/etc/couchpotato/" ]; then
 
 		mv /usr/local/etc/couchpotato /etc/couchpotato
