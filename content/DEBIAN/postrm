@@ -1,21 +1,18 @@
 #!/bin/bash
 
-if [ "$1" == "remove" ] || [ "$1" == "purge" ]; then
-
-	if [ -d "/etc/couchpotato" ]; then
-       	while true; do
-    			read -p "Do you want to remove the couchpotato database files? (yes/no) " yn
-    			case $yn in
-       			yes ) 	rm -r /etc/couchpotato &>/dev/null; 
-					break;;
-        			no )   break;;
-        			* ) echo "Please answer yes or no.";;
-    			esac
-		done
-	fi
+if [ "$1" == "remove" ]; then
 
 	if [ -d "/usr/local/share/couchpotato" ]; then
 		rm -r /usr/local/share/couchpotato &>/dev/null
+	fi
+
+elif [ "$1" == "purge" ]; then
+
+# removing config files and database should be performed only if user requested purge
+
+	if [ -d "/etc/couchpotato" ]; then
+		rm -fr /etc/couchpotato
+                rm -f /etc/default/couchpotato
 	fi
 
 fi
