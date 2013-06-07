@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ $1 == "remove" ]; then
+if [ "$1" == "remove" ] || [ "$1" == "purge" ]; then
 
         if [ -f "/etc/init.d/couchpotato" ]; then
                 /etc/init.d/couchpotato stop &>/dev/null;
