@@ -2,18 +2,15 @@
 
 if [ "$1" == "remove" ] || [ "$1" == "purge" ]; then
 
-	if [ -d "/usr/local/share/couchpotato" ]; then
-		rm -rf /usr/local/share/couchpotato &>/dev/null
-	fi
+	rm -rf /usr/local/share/couchpotato &>/dev/null
 
 # removing config files and database should be performed only if user requested purge
 
 	if [ "$1" == "purge" ]; then
 
-		if [ -d "/etc/couchpotato" ]; then
-			rm -fr /etc/couchpotato
-                	rm -f /etc/default/couchpotato
-		fi
+		rm -rf /etc/couchpotato
+                rm -f /etc/default/couchpotato
+
 	fi
 
 	true
