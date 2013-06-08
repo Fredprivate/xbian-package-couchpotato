@@ -3,6 +3,10 @@
 if [ "$1" == "remove" ] || [ "$1" == "purge" ]; then
 
 	rm -rf /usr/local/share/couchpotato
+	
+	if [ -h /usr/local/etc/couchpotato ]; then
+		rm -f /usr/local/etc/couchpotato
+	fi
 
 # removing config files and database should be performed only if user requested purge
 
